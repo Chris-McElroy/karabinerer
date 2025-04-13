@@ -69,6 +69,18 @@ let control = """
                         "name": "control mode",
                         "value": 1
                     }
+                },
+                {
+                    "set_variable": {
+                       "name": "left layer",
+                       "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "to_delayed_action": {
@@ -113,6 +125,18 @@ let control = """
                 {
                     "set_variable": {
                         "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                       "name": "left layer",
+                       "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 }

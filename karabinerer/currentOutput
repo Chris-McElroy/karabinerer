@@ -95,6 +95,18 @@
                         "name": "control mode",
                         "value": 1
                     }
+                },
+                {
+                    "set_variable": {
+                       "name": "left layer",
+                       "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "to_delayed_action": {
@@ -139,6 +151,18 @@
                 {
                     "set_variable": {
                         "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                       "name": "left layer",
+                       "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 }
@@ -313,7 +337,8 @@
             },
             "to": [
         {
-            "key_code": "6"
+            "key_code": "4",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -341,7 +366,8 @@
             },
             "to": [
         {
-            "key_code": "6"
+            "key_code": "4",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -368,7 +394,7 @@
             },
             "to": [
         {
-            "key_code": "5"
+            "key_code": "0"
         }],
             "type": "basic"
         },
@@ -396,7 +422,7 @@
             },
             "to": [
         {
-            "key_code": "5"
+            "key_code": "0"
         }],
             "type": "basic"
         },
@@ -423,7 +449,7 @@
             },
             "to": [
         {
-            "key_code": "4"
+            "key_code": "period"
         }],
             "type": "basic"
         },
@@ -451,7 +477,7 @@
             },
             "to": [
         {
-            "key_code": "4"
+            "key_code": "period"
         }],
             "type": "basic"
         },
@@ -478,7 +504,7 @@
             },
             "to": [
         {
-            "key_code": "period"
+            "key_code": "semicolon"
         }],
             "type": "basic"
         },
@@ -506,7 +532,7 @@
             },
             "to": [
         {
-            "key_code": "period"
+            "key_code": "semicolon"
         }],
             "type": "basic"
         },
@@ -533,7 +559,7 @@
             },
             "to": [
         {
-            "key_code": "8",
+            "key_code": "3",
             "modifiers": ["shift"]
         }],
             "type": "basic"
@@ -562,7 +588,7 @@
             },
             "to": [
         {
-            "key_code": "8",
+            "key_code": "3",
             "modifiers": ["shift"]
         }],
             "type": "basic"
@@ -590,7 +616,7 @@
             },
             "to": [
         {
-            "key_code": "equal_sign",
+            "key_code": "grave_accent_and_tilde",
             "modifiers": ["shift"]
         }],
             "type": "basic"
@@ -619,7 +645,7 @@
             },
             "to": [
         {
-            "key_code": "equal_sign",
+            "key_code": "grave_accent_and_tilde",
             "modifiers": ["shift"]
         }],
             "type": "basic"
@@ -647,7 +673,8 @@
             },
             "to": [
         {
-            "key_code": "slash"
+            "key_code": "7",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -675,7 +702,8 @@
             },
             "to": [
         {
-            "key_code": "slash"
+            "key_code": "7",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -702,7 +730,8 @@
             },
             "to": [
         {
-            "key_code": "backslash"
+            "key_code": "backslash",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -730,7 +759,8 @@
             },
             "to": [
         {
-            "key_code": "backslash"
+            "key_code": "backslash",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -804,7 +834,10 @@
             "from": {
                 "key_code": "a"
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "1"
+        }],
             "type": "basic"
         },
         {
@@ -829,7 +862,10 @@
                 "key_code": "a",
                 "modifiers": { "mandatory": ["left_option"] }
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "1"
+        }],
             "type": "basic"
         },
         {
@@ -855,7 +891,7 @@
             },
             "to": [
         {
-            "key_code": "3"
+            "key_code": "2"
         }],
             "type": "basic"
         },
@@ -883,7 +919,7 @@
             },
             "to": [
         {
-            "key_code": "3"
+            "key_code": "2"
         }],
             "type": "basic"
         },
@@ -910,7 +946,7 @@
             },
             "to": [
         {
-            "key_code": "2"
+            "key_code": "3"
         }],
             "type": "basic"
         },
@@ -938,7 +974,7 @@
             },
             "to": [
         {
-            "key_code": "2"
+            "key_code": "3"
         }],
             "type": "basic"
         },
@@ -965,7 +1001,7 @@
             },
             "to": [
         {
-            "key_code": "1"
+            "key_code": "4"
         }],
             "type": "basic"
         },
@@ -993,7 +1029,7 @@
             },
             "to": [
         {
-            "key_code": "1"
+            "key_code": "4"
         }],
             "type": "basic"
         },
@@ -1020,7 +1056,7 @@
             },
             "to": [
         {
-            "key_code": "0"
+            "key_code": "5"
         }],
             "type": "basic"
         },
@@ -1048,7 +1084,7 @@
             },
             "to": [
         {
-            "key_code": "0"
+            "key_code": "5"
         }],
             "type": "basic"
         },
@@ -1075,8 +1111,7 @@
             },
             "to": [
         {
-            "key_code": "4",
-            "modifiers": ["shift"]
+            "key_code": "6"
         }],
             "type": "basic"
         },
@@ -1104,8 +1139,7 @@
             },
             "to": [
         {
-            "key_code": "4",
-            "modifiers": ["shift"]
+            "key_code": "6"
         }],
             "type": "basic"
         },
@@ -1132,7 +1166,7 @@
             },
             "to": [
         {
-            "key_code": "hyphen"
+            "key_code": "7"
         }],
             "type": "basic"
         },
@@ -1160,7 +1194,7 @@
             },
             "to": [
         {
-            "key_code": "hyphen"
+            "key_code": "7"
         }],
             "type": "basic"
         },
@@ -1187,8 +1221,7 @@
             },
             "to": [
         {
-            "key_code": "9",
-            "modifiers": ["shift"]
+            "key_code": "8"
         }],
             "type": "basic"
         },
@@ -1216,8 +1249,7 @@
             },
             "to": [
         {
-            "key_code": "9",
-            "modifiers": ["shift"]
+            "key_code": "8"
         }],
             "type": "basic"
         },
@@ -1244,8 +1276,7 @@
             },
             "to": [
         {
-            "key_code": "0",
-            "modifiers": ["shift"]
+            "key_code": "9"
         }],
             "type": "basic"
         },
@@ -1273,8 +1304,7 @@
             },
             "to": [
         {
-            "key_code": "0",
-            "modifiers": ["shift"]
+            "key_code": "9"
         }],
             "type": "basic"
         },
@@ -1299,7 +1329,11 @@
             "from": {
                 "key_code": "z"
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "6",
+            "modifiers": ["shift"]
+        }],
             "type": "basic"
         },
         {
@@ -1324,7 +1358,11 @@
                 "key_code": "z",
                 "modifiers": { "mandatory": ["left_option"] }
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "6",
+            "modifiers": ["shift"]
+        }],
             "type": "basic"
         },
         {
@@ -1350,7 +1388,8 @@
             },
             "to": [
         {
-            "key_code": "9"
+            "key_code": "8",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -1378,7 +1417,8 @@
             },
             "to": [
         {
-            "key_code": "9"
+            "key_code": "8",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -1405,7 +1445,8 @@
             },
             "to": [
         {
-            "key_code": "8"
+            "key_code": "equal_sign",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -1433,7 +1474,8 @@
             },
             "to": [
         {
-            "key_code": "8"
+            "key_code": "equal_sign",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -1460,7 +1502,7 @@
             },
             "to": [
         {
-            "key_code": "7"
+            "key_code": "hyphen"
         }],
             "type": "basic"
         },
@@ -1488,7 +1530,7 @@
             },
             "to": [
         {
-            "key_code": "7"
+            "key_code": "hyphen"
         }],
             "type": "basic"
         },
@@ -1515,8 +1557,8 @@
             },
             "to": [
         {
-            "key_code": "semicolon",
-            "modifiers": ["shift"]
+            "key_code": "hyphen",
+            "modifiers": ["right_option"]
         }],
             "type": "basic"
         },
@@ -1544,8 +1586,8 @@
             },
             "to": [
         {
-            "key_code": "semicolon",
-            "modifiers": ["shift"]
+            "key_code": "hyphen",
+            "modifiers": ["right_option"]
         }],
             "type": "basic"
         },
@@ -1672,6 +1714,167 @@
                     "name": "left layer",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "right layer",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "comma"
+            },
+            "to": [
+        {
+            "key_code": "comma"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "right layer",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "comma",
+                "modifiers": { "mandatory": ["left_option"] }
+            },
+            "to": [
+        {
+            "key_code": "comma"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "right layer",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "quote"
+            },
+            "to": [
+        {
+            "key_code": "semicolon",
+            "modifiers": ["shift"]
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "right layer",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "quote",
+                "modifiers": { "mandatory": ["left_option"] }
+            },
+            "to": [
+        {
+            "key_code": "semicolon",
+            "modifiers": ["shift"]
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "right layer",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "period"
+            },
+            "to": [{ "key_code": "vk_none" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "right layer",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "period",
+                "modifiers": { "mandatory": ["left_option"] }
+            },
+            "to": [{ "key_code": "vk_none" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -1713,10 +1916,7 @@
                 "key_code": "w",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "open_bracket"
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -1731,10 +1931,7 @@
                 "key_code": "w",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "open_bracket"
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -1754,10 +1951,7 @@
                 "key_code": "e",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "close_bracket"
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -1772,10 +1966,7 @@
                 "key_code": "e",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "close_bracket"
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -1830,11 +2021,7 @@
                 "key_code": "t",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "period",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -1849,11 +2036,7 @@
                 "key_code": "t",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "period",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -1873,11 +2056,7 @@
                 "key_code": "y",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "6",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -1892,11 +2071,7 @@
                 "key_code": "y",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "6",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -1916,11 +2091,7 @@
                 "key_code": "u",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "equal_sign",
-            "modifiers": ["shift", "right_option"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -1935,11 +2106,7 @@
                 "key_code": "u",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "equal_sign",
-            "modifiers": ["shift", "right_option"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -1959,11 +2126,7 @@
                 "key_code": "i",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "comma",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -1978,11 +2141,7 @@
                 "key_code": "i",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "comma",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2002,11 +2161,7 @@
                 "key_code": "o",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "period",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2021,11 +2176,7 @@
                 "key_code": "o",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "period",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2115,11 +2266,7 @@
                 "key_code": "s",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "9",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2134,11 +2281,7 @@
                 "key_code": "s",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "9",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2158,11 +2301,7 @@
                 "key_code": "d",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "0",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2177,11 +2316,7 @@
                 "key_code": "d",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "0",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2201,11 +2336,7 @@
                 "key_code": "f",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "equal_sign",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2220,11 +2351,7 @@
                 "key_code": "f",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "equal_sign",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2244,10 +2371,7 @@
                 "key_code": "g",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "equal_sign"
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2262,10 +2386,7 @@
                 "key_code": "g",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "equal_sign"
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2285,11 +2406,7 @@
                 "key_code": "h",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "3",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2304,11 +2421,7 @@
                 "key_code": "h",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "3",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2328,11 +2441,7 @@
                 "key_code": "j",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "grave_accent_and_tilde",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2347,11 +2456,7 @@
                 "key_code": "j",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "grave_accent_and_tilde",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2371,11 +2476,7 @@
                 "key_code": "k",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "open_bracket",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2390,11 +2491,7 @@
                 "key_code": "k",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "open_bracket",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2414,11 +2511,7 @@
                 "key_code": "l",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "close_bracket",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2433,11 +2526,7 @@
                 "key_code": "l",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "close_bracket",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2597,10 +2686,7 @@
                 "key_code": "b",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "hyphen"
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2615,10 +2701,7 @@
                 "key_code": "b",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "hyphen"
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2638,11 +2721,7 @@
                 "key_code": "n",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "5",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2657,11 +2736,7 @@
                 "key_code": "n",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "5",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2681,11 +2756,7 @@
                 "key_code": "m",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "x",
-            "modifiers": ["right_option"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2700,11 +2771,112 @@
                 "key_code": "m",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
+            "to": [{ "key_code": "vk_none" }],
+            "type": "basic"
+        },
         {
-            "key_code": "x",
-            "modifiers": ["right_option"]
-        }],
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "comma",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [{ "key_code": "vk_none" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "comma",
+                "modifiers": { "mandatory": ["left_option", "shift"] }
+            },
+            "to": [{ "key_code": "vk_none" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "quote",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [{ "key_code": "vk_none" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "quote",
+                "modifiers": { "mandatory": ["left_option", "shift"] }
+            },
+            "to": [{ "key_code": "vk_none" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "period",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [{ "key_code": "vk_none" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "period",
+                "modifiers": { "mandatory": ["left_option", "shift"] }
+            },
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -2779,7 +2951,8 @@
             },
             "to": [
         {
-            "key_code": "open_bracket"
+            "key_code": "open_bracket",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -2807,7 +2980,8 @@
             },
             "to": [
         {
-            "key_code": "open_bracket"
+            "key_code": "open_bracket",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -2834,7 +3008,8 @@
             },
             "to": [
         {
-            "key_code": "close_bracket"
+            "key_code": "close_bracket",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -2862,7 +3037,8 @@
             },
             "to": [
         {
-            "key_code": "close_bracket"
+            "key_code": "close_bracket",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -2887,7 +3063,10 @@
             "from": {
                 "key_code": "r"
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "grave_accent_and_tilde"
+        }],
             "type": "basic"
         },
         {
@@ -2912,7 +3091,10 @@
                 "key_code": "r",
                 "modifiers": { "mandatory": ["right_control"] }
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "grave_accent_and_tilde"
+        }],
             "type": "basic"
         },
         {
@@ -2985,11 +3167,7 @@
             "from": {
                 "key_code": "y"
             },
-            "to": [
-        {
-            "key_code": "8",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -3014,11 +3192,7 @@
                 "key_code": "y",
                 "modifiers": { "mandatory": ["right_control"] }
             },
-            "to": [
-        {
-            "key_code": "8",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -3044,8 +3218,8 @@
             },
             "to": [
         {
-            "key_code": "hyphen",
-            "modifiers": ["shift", "right_option"]
+            "key_code": "2",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -3073,8 +3247,8 @@
             },
             "to": [
         {
-            "key_code": "hyphen",
-            "modifiers": ["shift", "right_option"]
+            "key_code": "2",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -3101,7 +3275,8 @@
             },
             "to": [
         {
-            "key_code": "slash"
+            "key_code": "comma",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -3129,7 +3304,8 @@
             },
             "to": [
         {
-            "key_code": "slash"
+            "key_code": "comma",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -3156,7 +3332,8 @@
             },
             "to": [
         {
-            "key_code": "backslash"
+            "key_code": "period",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -3184,7 +3361,8 @@
             },
             "to": [
         {
-            "key_code": "backslash"
+            "key_code": "period",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -3309,7 +3487,7 @@
             },
             "to": [
         {
-            "key_code": "open_bracket",
+            "key_code": "9",
             "modifiers": ["shift"]
         }],
             "type": "basic"
@@ -3338,7 +3516,7 @@
             },
             "to": [
         {
-            "key_code": "open_bracket",
+            "key_code": "9",
             "modifiers": ["shift"]
         }],
             "type": "basic"
@@ -3366,7 +3544,7 @@
             },
             "to": [
         {
-            "key_code": "close_bracket",
+            "key_code": "0",
             "modifiers": ["shift"]
         }],
             "type": "basic"
@@ -3395,7 +3573,7 @@
             },
             "to": [
         {
-            "key_code": "close_bracket",
+            "key_code": "0",
             "modifiers": ["shift"]
         }],
             "type": "basic"
@@ -3423,7 +3601,8 @@
             },
             "to": [
         {
-            "key_code": "semicolon"
+            "key_code": "1",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -3451,7 +3630,8 @@
             },
             "to": [
         {
-            "key_code": "semicolon"
+            "key_code": "1",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -3525,11 +3705,7 @@
             "from": {
                 "key_code": "h"
             },
-            "to": [
-        {
-            "key_code": "1",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -3554,11 +3730,7 @@
                 "key_code": "h",
                 "modifiers": { "mandatory": ["right_control"] }
             },
-            "to": [
-        {
-            "key_code": "1",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -3584,7 +3756,8 @@
             },
             "to": [
         {
-            "key_code": "hyphen"
+            "key_code": "slash",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -3612,7 +3785,8 @@
             },
             "to": [
         {
-            "key_code": "hyphen"
+            "key_code": "slash",
+            "modifiers": ["shift"]
         }],
             "type": "basic"
         },
@@ -3639,8 +3813,7 @@
             },
             "to": [
         {
-            "key_code": "9",
-            "modifiers": ["shift"]
+            "key_code": "slash"
         }],
             "type": "basic"
         },
@@ -3668,8 +3841,7 @@
             },
             "to": [
         {
-            "key_code": "9",
-            "modifiers": ["shift"]
+            "key_code": "slash"
         }],
             "type": "basic"
         },
@@ -3696,8 +3868,7 @@
             },
             "to": [
         {
-            "key_code": "0",
-            "modifiers": ["shift"]
+            "key_code": "backslash"
         }],
             "type": "basic"
         },
@@ -3725,8 +3896,7 @@
             },
             "to": [
         {
-            "key_code": "0",
-            "modifiers": ["shift"]
+            "key_code": "backslash"
         }],
             "type": "basic"
         },
@@ -3800,7 +3970,10 @@
             "from": {
                 "key_code": "x"
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "open_bracket"
+        }],
             "type": "basic"
         },
         {
@@ -3825,7 +3998,10 @@
                 "key_code": "x",
                 "modifiers": { "mandatory": ["right_control"] }
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "open_bracket"
+        }],
             "type": "basic"
         },
         {
@@ -3849,7 +4025,10 @@
             "from": {
                 "key_code": "c"
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "close_bracket"
+        }],
             "type": "basic"
         },
         {
@@ -3874,7 +4053,10 @@
                 "key_code": "c",
                 "modifiers": { "mandatory": ["right_control"] }
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "close_bracket"
+        }],
             "type": "basic"
         },
         {
@@ -3898,7 +4080,11 @@
             "from": {
                 "key_code": "v"
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "hyphen",
+            "modifiers": ["right_option", "shift"]
+        }],
             "type": "basic"
         },
         {
@@ -3923,7 +4109,11 @@
                 "key_code": "v",
                 "modifiers": { "mandatory": ["right_control"] }
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "hyphen",
+            "modifiers": ["right_option", "shift"]
+        }],
             "type": "basic"
         },
         {
@@ -3947,7 +4137,11 @@
             "from": {
                 "key_code": "b"
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "hyphen",
+            "modifiers": ["shift"]
+        }],
             "type": "basic"
         },
         {
@@ -3972,7 +4166,11 @@
                 "key_code": "b",
                 "modifiers": { "mandatory": ["right_control"] }
             },
-            "to": [{ "key_code": "vk_none" }],
+            "to": [
+        {
+            "key_code": "hyphen",
+            "modifiers": ["shift"]
+        }],
             "type": "basic"
         },
         {
@@ -3996,11 +4194,7 @@
             "from": {
                 "key_code": "n"
             },
-            "to": [
-        {
-            "key_code": "slash",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4025,11 +4219,7 @@
                 "key_code": "n",
                 "modifiers": { "mandatory": ["right_control"] }
             },
-            "to": [
-        {
-            "key_code": "slash",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4053,11 +4243,7 @@
             "from": {
                 "key_code": "m"
             },
-            "to": [
-        {
-            "key_code": "7",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4082,11 +4268,7 @@
                 "key_code": "m",
                 "modifiers": { "mandatory": ["right_control"] }
             },
-            "to": [
-        {
-            "key_code": "7",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4428,11 +4610,7 @@
                 "key_code": "y",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "6",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4447,11 +4625,7 @@
                 "key_code": "y",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "6",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4471,11 +4645,7 @@
                 "key_code": "u",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "hyphen",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4490,11 +4660,7 @@
                 "key_code": "u",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "hyphen",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4514,11 +4680,7 @@
                 "key_code": "i",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "comma",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4533,11 +4695,7 @@
                 "key_code": "i",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "comma",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4557,11 +4715,7 @@
                 "key_code": "o",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "period",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4576,11 +4730,7 @@
                 "key_code": "o",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "period",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4845,11 +4995,7 @@
                 "key_code": "j",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "hyphen",
-            "modifiers": ["right_option"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4864,11 +5010,7 @@
                 "key_code": "j",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "hyphen",
-            "modifiers": ["right_option"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4888,11 +5030,7 @@
                 "key_code": "k",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "open_bracket",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4907,11 +5045,7 @@
                 "key_code": "k",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "open_bracket",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4931,11 +5065,7 @@
                 "key_code": "l",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "close_bracket",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -4950,11 +5080,7 @@
                 "key_code": "l",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "close_bracket",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -5184,11 +5310,7 @@
                 "key_code": "m",
                 "modifiers": { "mandatory": ["shift"] }
             },
-            "to": [
-        {
-            "key_code": "2",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
@@ -5203,11 +5325,7 @@
                 "key_code": "m",
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
-            "to": [
-        {
-            "key_code": "2",
-            "modifiers": ["shift"]
-        }],
+            "to": [{ "key_code": "vk_none" }],
             "type": "basic"
         },
         {
