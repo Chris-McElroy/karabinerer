@@ -8,59 +8,8 @@
 let control = """
 ,
         {
-            "conditions": [
-                {
-                    "name": "recent control",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
             "from": { "key_code": "left_control" },
             "to": [
-                {
-                    "set_variable": {
-                        "name": "control mode",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "recent control",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                       "name": "left layer",
-                       "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "right layer",
-                        "value": 0
-                    }
-                },
-                { "key_code": "left_control" }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "control mode",
-                    "type": "variable_if",
-                    "value": 0
-                }
-            ],
-            "from": { "key_code": "left_control" },
-            "to": [
-                {
-                    "set_variable": {
-                        "name": "recent control",
-                        "value": 1
-                    }
-                },
                 { "key_code": "left_control" }
             ],
             "to_if_alone": [
@@ -83,82 +32,6 @@ let control = """
                     }
                 }
             ],
-            "to_delayed_action": {
-                "to_if_invoked": [
-                    {
-                        "set_variable": {
-                            "name": "recent control",
-                            "value": 0
-                        }
-                    }
-                ],
-                "to_if_canceled": [
-                    {
-                        "set_variable": {
-                            "name": "recent control",
-                            "value": 0
-                        }
-                    }
-                ]
-            },
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "control mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": { "key_code": "left_control" },
-            "to": [
-                {
-                    "set_variable": {
-                        "name": "recent control",
-                        "value": 1
-                    }
-                },
-                { "key_code": "left_control" }
-            ],
-            "to_if_alone": [
-                {
-                    "set_variable": {
-                        "name": "control mode",
-                        "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                       "name": "left layer",
-                       "value": 0
-                    }
-                },
-                {
-                    "set_variable": {
-                        "name": "right layer",
-                        "value": 0
-                    }
-                }
-            ],
-            "to_delayed_action": {
-                "to_if_invoked": [
-                    {
-                        "set_variable": {
-                            "name": "recent control",
-                            "value": 0
-                        }
-                    }
-                ],
-                "to_if_canceled": [
-                    {
-                        "set_variable": {
-                            "name": "recent control",
-                            "value": 0
-                        }
-                    }
-                ]
-            },
             "type": "basic"
         }
 """
@@ -166,38 +39,43 @@ let control = """
 let leftLayer = """
 ,
         {
-            "conditions": [
-                {
-                    "name": "left layer",
-                    "type": "variable_if",
-                    "value": 0
-                }
-            ],
-            "from": { "key_code": "left_option" },
-            "to": [{ "key_code": "left_option" }],
-            "to_if_alone": [
-                {
-                    "set_variable": {
-                        "name": "left layer",
-                        "value": 1
-                    }
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "left layer",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
             "from": { "key_code": "left_option" },
             "to": [
                 {
                     "set_variable": {
-                        "name": "left layer",
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                       "name": "left layer",
+                       "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
+                },
+                { "key_code": "left_option" }],
+            "to_if_alone": [
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                       "name": "left layer",
+                       "value": 1
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 }
@@ -209,16 +87,40 @@ let leftLayer = """
 let rightLayer = """
 ,
         {
-            "conditions": [
-                {
-                    "name": "right layer",
-                    "type": "variable_if",
-                    "value": 0
-                }
-            ],
             "from": { "key_code": "right_control" },
-            "to": [{ "key_code": "right_control" }],
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                       "name": "left layer",
+                       "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
+                },
+                { "key_code": "right_control" }],
             "to_if_alone": [
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                       "name": "left layer",
+                       "value": 0
+                    }
+                },
                 {
                     "set_variable": {
                         "name": "right layer",
@@ -227,17 +129,29 @@ let rightLayer = """
                 }
             ],
             "type": "basic"
-        },
+        }
+"""
+
+let typingMode = """
+,
         {
-            "conditions": [
-                {
-                    "name": "right layer",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": { "key_code": "right_control" },
+            "from": { "key_code": "left_shift" },
             "to": [
+                { "key_code": "left_shift" }
+            ],
+            "to_if_alone": [
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                       "name": "left layer",
+                       "value": 0
+                    }
+                },
                 {
                     "set_variable": {
                         "name": "right layer",
@@ -249,8 +163,24 @@ let rightLayer = """
         }
 """
 
+let spaceKey = """
+,
+        {
+            "from": { "key_code": "spacebar" },
+            "to": [
+                { "key_code": "left_shift" }
+            ],
+            "to_if_alone": [
+                { "key_code": "spacebar" }
+            ],
+            "type": "basic"
+        }
+"""
+
 func addModifiers() {
     manipulators.append(control)
     manipulators.append(leftLayer)
     manipulators.append(rightLayer)
+    manipulators.append(typingMode)
+//    manipulators.append(spaceKey)
 }

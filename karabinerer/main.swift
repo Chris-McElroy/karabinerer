@@ -21,47 +21,15 @@ let end = """
 }
 """
 
-var manipulators = """
-        {
-            "from": {
-                "key_code": "delete_or_backspace",
-                "modifiers": { "mandatory": ["left_shift"] }
-            },
-            "to": [
-                {
-                    "key_code": "delete_or_backspace",
-                    "modifiers": ["right_option"]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "from": {
-                "key_code": "spacebar",
-                "modifiers": { "mandatory": ["left_control"] }
-            },
-            "to": [
-                {
-                    "set_variable": {
-                        "name": "control mode",
-                        "value": 0
-                    }
-                },
-                {
-                    "key_code": "spacebar",
-                    "modifiers": ["left_control"]
-                }
-            ],
-            "type": "basic"
-        }
-"""
+var manipulators = start
 
+addRandom()
 addModifiers()
 addNumbersLayer()
 addSymbolsLayer()
 addControlsLayer()
 
-print(start + manipulators + end)
+print(manipulators + end)
     
 func getFromText(key: String?, mandMods: [String]? = nil, optMods: [String]? = nil) -> String {
     guard let key else { return "\"key_code\": \"vk_none\"" }
@@ -115,3 +83,35 @@ func getToText(key: String?, mods: [String]? = nil, controlOff: Bool = false) ->
     return output
 }
 
+func getAppList(ifList: [String]? = nil, unlessList: [String]? = nil) -> String {
+    var output = """
+            "conditions": [
+"""
+    
+    if let ifList {
+        output += """
+                {
+                    "bundle_identifiers": [
+                        "^\(ifList.joined(separator: "\", \""))"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+"""
+        if let unlessList { output += "," }
+    }
+    
+    if let unlessList {
+        output += """
+                {
+                    "bundle_identifiers": [
+                        "^\(unlessList.joined(separator: "\", \""))"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+"""
+    }
+    
+    return output + """
+            ],
+"""
+}
