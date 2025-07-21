@@ -23,6 +23,7 @@ let end = """
 
 var manipulators = start
 
+addMinecraft()
 addRandom()
 addModifiers()
 addNumbersLayer()

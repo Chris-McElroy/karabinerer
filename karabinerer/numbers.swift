@@ -8,7 +8,7 @@
 import Foundation
 
 let baseNumbersKeymap: [(String, String)] = [
-    ("q", getToText(key: nil)),
+    ("q", getToText(key: "slash")),
     ("w", getToText(key: "4", mods: ["shift"])),
     ("e", getToText(key: "0")),
     ("r", getToText(key: "hyphen")),

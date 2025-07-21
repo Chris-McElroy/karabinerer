@@ -6,6 +6,7 @@
 //
 
 var spacebarMods = """
+,
         {
             "from": {
                 "key_code": "spacebar",
