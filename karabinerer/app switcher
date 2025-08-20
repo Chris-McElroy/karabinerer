@@ -1,0 +1,89 @@
+{
+    "description": "app switcher",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "f",
+                "modifiers": { "mandatory": ["left_control"] }
+            },
+            "parameters": { "basic.to_delayed_action_delay_milliseconds": 0 },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "app switcher",
+                        "value": 1
+                    }
+                },
+                { "key_code": "left_command" }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "app switcher",
+                        "value": 0
+                    }
+                }
+            ],
+            "to_delayed_action": {
+                "to_if_canceled": [
+                    {
+                        "key_code": "tab",
+                        "modifiers": ["left_command"]
+                    }
+                ],
+                "to_if_invoked": [
+                    {
+                        "key_code": "tab",
+                        "modifiers": ["left_command"]
+                    }
+                ]
+            },
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "app switcher",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "s",
+                "modifiers": { "optional": ["left_control", "left_command"] }
+            },
+            "to": [{ "key_code": "left_arrow" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "app switcher",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "d",
+                "modifiers": { "optional": ["left_control", "left_command"] }
+            },
+            "to": [{ "key_code": "right_arrow" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "app switcher",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "a",
+                "modifiers": { "optional": ["left_control", "left_command"] }
+            },
+            "to": [{ "key_code": "h" }],
+            "type": "basic"
+        }
+    ]
+}
