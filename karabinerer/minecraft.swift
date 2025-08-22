@@ -20,7 +20,7 @@ let baseMinecraftMap: [(String, String)] = [
     ("q", getToText(key: "4")),
     ("a", getToText(key: "5")),
     ("z", getToText(key: "6")),
-    ("tab", getToText(key: "q")),
+    ("tab", getToText(key: "0")),
     ("left_option", getToText(key: "a")),
     ("left_control", getToText(key: "left_shift")),
     ("left_shift", getToText(key: "d")),
@@ -89,7 +89,7 @@ let f3ModeStarter = """
             ],
             "from": {
                 "key_code": "r",
-                "modifiers": { "optional": ["left_shift", "left_control"] }
+                "modifiers": { "optional": ["left_shift", "left_control", "right_control"] }
             },
             "to": [
                 {
@@ -174,7 +174,7 @@ let baseMinecraftMapper: (String, String) -> String = { f, t in
             "from": {
                 "key_code": "\(f)",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control"]
+                    "optional": ["left_shift", "left_control", "right_control"]
                 }
             },
             "to": [\(t)],
@@ -197,7 +197,7 @@ let f3MinecraftMapper: (String, String) -> String = { f, t in
             "from": {
                 "key_code": "\(f)",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control"]
+                    "optional": ["left_shift", "left_control", "right_control"]
                 }
             },
             "to": [\(t)],
@@ -228,7 +228,7 @@ let comboMinecraftMapper: (String, String, String) -> String = { f1, f2, t in
                     {"key_code": "\(f2)"}
                 ],
                 "modifiers": {
-                    "optional": ["left_shift", "left_control"]
+                    "optional": ["left_shift", "left_control", "right_control"]
                 }
             },
             "to": [\(t)],
