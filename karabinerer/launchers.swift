@@ -41,6 +41,8 @@ let launchers: [(String, Bool, String)] = [
     ("m", false, "com.spotify.client"),
     ("comma", false, "com.microsoft.Word"),
     ("period", false, "com.runningwithcrayons.Alfred-Preferences"),
+    
+    ("spacebar", false, "com.runningwithcrayons.Alfred"),
 ]
 
 let launcher: (String, Bool, String) -> String = { k, s, a in

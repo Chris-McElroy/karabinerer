@@ -6,40 +6,51 @@
 //
 
 let baseMinecraftMap: [(String, String)] = [
-    ("t", getToText(key: "f")),
-    ("g", getToText(key: "z")),
-    ("b", getToText(key: "f5")),
-    ("f", getToText(key: "spacebar")),
-    ("v", getToText(key: "right_control")),
-    ("e", getToText(key: "escape")),
-    ("d", getToText(key: "w")),
-    ("c", getToText(key: "s")),
-    ("w", getToText(key: "1")),
-    ("s", getToText(key: "2")),
-    ("x", getToText(key: "3")),
-    ("q", getToText(key: "4")),
-    ("a", getToText(key: "5")),
-    ("z", getToText(key: "6")),
-    ("tab", getToText(key: "0")),
     ("left_option", getToText(key: "a")),
-    ("left_control", getToText(key: "left_shift")),
+    ("left_control", getToText(key: "z")),
     ("left_shift", getToText(key: "d")),
+    
+    ("t", getToText(key: "4")),
+    ("g", getToText(key: "5")),
+    ("b", getToText(key: "6")),
+    
+    ("r", getToText(key: "1")),
+    ("f", getToText(key: "2")),
+    ("v", getToText(key: "3")),
+    
+    ("e", getToText(key: "q")),
+    ("d", getToText(key: "spacebar")),
+//    ("c", getToText(key: "f3")),
+    
+    ("w", getToText(key: "escape")),
+    ("s", getToText(key: "w")),
+    ("x", getToText(key: "s")),
+    
+    ("q", getToText(key: "left_command")),
+//    ("a", getToText(key: "  ")),
+    ("z", getToText(key: "left_shift")),
+    
+    ("tab", getToText(key: "f5")),
+    
     ("return_or_enter", getToText(key: "tab")),
     ("right_command", getToText(key: "left_control")),
 ]
 
 let f3MinecraftMap: [(String, String)] = [
-    ("w", getToText(key: "f")),
-    ("a", getToText(key: "b")),
-    ("q", getToText(key: "g")),
-    ("z", getToText(key: "h")),
+    ("v", getToText(key: "g")),
+    ("f", getToText(key: "b")),
+    ("left_control", getToText(key: "f")),
+    ("r", getToText(key: "h")),
+    ("t", getToText(key: "f4")),
 ]
 
-let comboMinecraftMap: [(String, String, String)] = [
-    ("q", "w", getToText(key: "7")),
-    ("a", "s", getToText(key: "8")),
-    ("z", "x", getToText(key: "9")),
+let invMinecraftMap: [(String, String)] = [
+    ("r", getToText(key: "7")),
+    ("f", getToText(key: "8")),
+    ("v", getToText(key: "9")),
+    ("g", getToText(key: "e")),
 ]
+
 
 let minecraftExitKeys: [String] = [
     "y", "h", "n",
@@ -88,8 +99,8 @@ let f3ModeStarter = """
                 }
             ],
             "from": {
-                "key_code": "r",
-                "modifiers": { "optional": ["left_shift", "left_control", "right_control"] }
+                "key_code": "c",
+                "modifiers": { "optional": ["left_shift", "right_shift", "left_command", "left_control"] }
             },
             "to": [
                 {
@@ -107,6 +118,54 @@ let f3ModeStarter = """
                         "value": 0
                     }
                 }
+            ],
+            "type": "basic"
+        }
+"""
+
+let invModeStarter = """
+,
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "f3 mode",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "a",
+                "modifiers": { "optional": ["left_shift", "right_shift", "left_command", "left_control"] }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 1
+                    }
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                }
+            ],
+            "to_if_alone": [
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                { "key_code": "0" }
             ],
             "type": "basic"
         }
@@ -174,7 +233,7 @@ let baseMinecraftMapper: (String, String) -> String = { f, t in
             "from": {
                 "key_code": "\(f)",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "left_control"]
                 }
             },
             "to": [\(t)],
@@ -197,7 +256,7 @@ let f3MinecraftMapper: (String, String) -> String = { f, t in
             "from": {
                 "key_code": "\(f)",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "left_control"]
                 }
             },
             "to": [\(t)],
@@ -206,29 +265,21 @@ let f3MinecraftMapper: (String, String) -> String = { f, t in
 """
 }
 
-let comboMinecraftMapper: (String, String, String) -> String = { f1, f2, t in
+let invMinecraftMapper: (String, String) -> String = { f, t in
 """
 ,
         {
             "conditions": [
                 {
-                    "name": "minecraft mode",
+                    "name": "inv mode",
                     "type": "variable_if",
                     "value": 1
-                },
-                {
-                    "name": "f3 mode",
-                    "type": "variable_if",
-                    "value": 0
                 }
             ],
             "from": {
-                "simultaneous": [
-                    {"key_code": "\(f1)"},
-                    {"key_code": "\(f2)"}
-                ],
+                "key_code": "\(f)",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "left_control"]
                 }
             },
             "to": [\(t)],
@@ -236,6 +287,37 @@ let comboMinecraftMapper: (String, String, String) -> String = { f1, f2, t in
         }
 """
 }
+
+//let comboMinecraftMapper: (String, String, String) -> String = { f1, f2, t in
+//"""
+//,
+//        {
+//            "conditions": [
+//                {
+//                    "name": "minecraft mode",
+//                    "type": "variable_if",
+//                    "value": 1
+//                },
+//                {
+//                    "name": "f3 mode",
+//                    "type": "variable_if",
+//                    "value": 0
+//                }
+//            ],
+//            "from": {
+//                "simultaneous": [
+//                    {"key_code": "\(f1)"},
+//                    {"key_code": "\(f2)"}
+//                ],
+//                "modifiers": {
+//                    "optional": ["left_shift", "right_shift", "left_command", "left_control""]
+//                }
+//            },
+//            "to": [\(t)],
+//            "type": "basic"
+//        }
+//"""
+//}
 
 
 let minecraftExitMapper: (String) -> String = { k in
@@ -268,12 +350,13 @@ let minecraftExitMapper: (String) -> String = { k in
 func addMinecraft() {
     manipulators.append(minecraftModeStarter)
     manipulators.append(f3ModeStarter)
+    manipulators.append(invModeStarter)
     manipulators.append(minecraftCustomExit)
     for (from, to) in f3MinecraftMap {
         manipulators.append(f3MinecraftMapper(from, to))
     }
-    for (from1, from2, to) in comboMinecraftMap {
-        manipulators.append(comboMinecraftMapper(from1, from2, to))
+    for (from, to) in invMinecraftMap {
+        manipulators.append(invMinecraftMapper(from, to))
     }
     for (from, to) in baseMinecraftMap {
         manipulators.append(baseMinecraftMapper(from, to))

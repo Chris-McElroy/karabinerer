@@ -32,7 +32,7 @@ addSymbolsLayer()
 addControlsLayer()
 
 print(manipulators + end)
-    
+
 func getFromText(key: String?, mandMods: [String]? = nil, optMods: [String]? = nil) -> String {
     guard let key else { return "\"key_code\": \"vk_none\"" }
     var output = "\"key_code\": \"\(key)\""
