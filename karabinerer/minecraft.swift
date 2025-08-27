@@ -7,7 +7,7 @@
 
 let baseMinecraftMap: [(String, String)] = [
     ("left_option", getToText(key: "a")),
-    ("left_control", getToText(key: "z")),
+    ("left_control", getToText(key: "right_shift")),
     ("left_shift", getToText(key: "d")),
     
     ("t", getToText(key: "4")),
@@ -26,14 +26,49 @@ let baseMinecraftMap: [(String, String)] = [
     ("s", getToText(key: "w")),
     ("x", getToText(key: "s")),
     
-    ("q", getToText(key: "left_command")),
+    ("q", getToText(key: "f")),
 //    ("a", getToText(key: "  ")),
     ("z", getToText(key: "left_shift")),
     
-    ("tab", getToText(key: "f5")),
+    ("tab", getToText(key: "right_control")),
     
+    ("y", getToText(key: "c")),
+    ("h", getToText(key: "x")),
     ("return_or_enter", getToText(key: "tab")),
-    ("right_command", getToText(key: "left_control")),
+    ("right_command", getToText(key: "r")),
+]
+
+let altMinecraftMap: [(String, String)] = [
+    ("left_shift", getToText(key: "a")),
+    ("left_control", getToText(key: "right_shift")),
+    ("spacebar", getToText(key: "d")),
+    
+    ("t", getToText(key: "4")),
+    ("g", getToText(key: "5")),
+    ("b", getToText(key: "6")),
+    
+    ("r", getToText(key: "1")),
+    ("f", getToText(key: "2")),
+    ("v", getToText(key: "3")),
+    
+    ("e", getToText(key: "q")),
+    ("d", getToText(key: "spacebar")),
+//    ("c", getToText(key: "f3")),
+    
+    ("w", getToText(key: "escape")),
+    ("s", getToText(key: "w")),
+    ("x", getToText(key: "s")),
+    
+    ("q", getToText(key: "f")),
+//    ("a", getToText(key: "  ")),
+    ("z", getToText(key: "left_shift")),
+    
+    ("tab", getToText(key: "left_control")),
+    
+    ("y", getToText(key: "c")),
+    ("h", getToText(key: "x")),
+    ("return_or_enter", getToText(key: "tab")),
+    ("right_command", getToText(key: "r")),
 ]
 
 let f3MinecraftMap: [(String, String)] = [
@@ -49,18 +84,18 @@ let invMinecraftMap: [(String, String)] = [
     ("f", getToText(key: "8")),
     ("v", getToText(key: "9")),
     ("g", getToText(key: "e")),
+    ("e", getToText(key: "q", mods: ["left_command"])),
 ]
 
 
 let minecraftExitKeys: [String] = [
-    "y", "h", "n",
+              "n",
     "u",      "m",
     "i",      "comma",
     "o", "l", "quote",
     "p",      "period",
-    "right_command",
-    "spacebar",
     "right_control",
+    "delete_or_backspace",
 ]
 
 let minecraftModeStarter = """
@@ -88,19 +123,45 @@ let minecraftModeStarter = """
         }
 """
 
-let f3ModeStarter = """
+let altMinecraftModeStarter = """
 ,
         {
             "conditions": [
                 {
                     "name": "minecraft mode",
                     "type": "variable_if",
-                    "value": 1
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "quote",
+                "modifiers": { "mandatory": ["left_control", "left_shift"] }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "minecraft mode",
+                        "value": 2
+                    }
+                }
+            ],
+            "type": "basic"
+        }
+"""
+
+let f3ModeStarter = """
+,
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
                 "key_code": "c",
-                "modifiers": { "optional": ["left_shift", "right_shift", "left_command", "left_control"] }
+                "modifiers": { "optional": ["left_shift", "right_shift", "left_command", "right_control"] }
             },
             "to": [
                 {
@@ -129,18 +190,13 @@ let invModeStarter = """
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                },
-                {
-                    "name": "f3 mode",
-                    "type": "variable_if",
+                    "type": "variable_unless",
                     "value": 0
                 }
             ],
             "from": {
                 "key_code": "a",
-                "modifiers": { "optional": ["left_shift", "right_shift", "left_command", "left_control"] }
+                "modifiers": { "optional": ["left_shift", "right_shift", "left_command", "right_control"] }
             },
             "to": [
                 {
@@ -177,8 +233,8 @@ let minecraftCustomExit = """
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -191,6 +247,18 @@ let minecraftCustomExit = """
                         "value": 0
                     }
                 },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
                 \(getToText(key: "t"))
             ],
             "type": "basic"
@@ -199,8 +267,8 @@ let minecraftCustomExit = """
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -210,6 +278,18 @@ let minecraftCustomExit = """
                 {
                     "set_variable": {
                         "name": "minecraft mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
                         "value": 0
                     }
                 },
@@ -233,7 +313,30 @@ let baseMinecraftMapper: (String, String) -> String = { f, t in
             "from": {
                 "key_code": "\(f)",
                 "modifiers": {
-                    "optional": ["left_shift", "right_shift", "left_command", "left_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [\(t)],
+            "type": "basic"
+        }
+"""
+}
+
+let altMinecraftMapper: (String, String) -> String = { f, t in
+"""
+,
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 2
+                }
+            ],
+            "from": {
+                "key_code": "\(f)",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [\(t)],
@@ -256,7 +359,7 @@ let f3MinecraftMapper: (String, String) -> String = { f, t in
             "from": {
                 "key_code": "\(f)",
                 "modifiers": {
-                    "optional": ["left_shift", "right_shift", "left_command", "left_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [\(t)],
@@ -279,7 +382,7 @@ let invMinecraftMapper: (String, String) -> String = { f, t in
             "from": {
                 "key_code": "\(f)",
                 "modifiers": {
-                    "optional": ["left_shift", "right_shift", "left_command", "left_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [\(t)],
@@ -310,7 +413,7 @@ let invMinecraftMapper: (String, String) -> String = { f, t in
 //                    {"key_code": "\(f2)"}
 //                ],
 //                "modifiers": {
-//                    "optional": ["left_shift", "right_shift", "left_command", "left_control""]
+//                    "optional": ["left_shift", "right_shift", "left_command", "right_control""]
 //                }
 //            },
 //            "to": [\(t)],
@@ -327,8 +430,8 @@ let minecraftExitMapper: (String) -> String = { k in
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -340,6 +443,18 @@ let minecraftExitMapper: (String) -> String = { k in
                         "name": "minecraft mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -349,6 +464,7 @@ let minecraftExitMapper: (String) -> String = { k in
 
 func addMinecraft() {
     manipulators.append(minecraftModeStarter)
+    manipulators.append(altMinecraftModeStarter)
     manipulators.append(f3ModeStarter)
     manipulators.append(invModeStarter)
     manipulators.append(minecraftCustomExit)
@@ -360,6 +476,9 @@ func addMinecraft() {
     }
     for (from, to) in baseMinecraftMap {
         manipulators.append(baseMinecraftMapper(from, to))
+    }
+    for (from, to) in altMinecraftMap {
+        manipulators.append(altMinecraftMapper(from, to))
     }
     for (key) in minecraftExitKeys {
         manipulators.append(minecraftExitMapper(key))

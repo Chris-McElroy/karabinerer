@@ -8,41 +8,41 @@
 
 
 let launchers: [(String, Bool, String)] = [
-    ("q", false, "com.endel.endel"), // TODO make endel playpause boi
-    ("q", true, "com.endel.endel"),
-    ("w", false, "com.microsoft.Excel"),
-    ("e", false, "md.obsidian"),
-    ("r", false, "com.microsoft.Outlook"),
-    ("r", true, "com.edisonmail.edisonmail"),
-    ("t", false, "com.microsoft.teams2"),
-    ("y", false, "com.rstudio.desktop"),
-    ("u", false, "dev.warp.Warp-Stable"),
-    ("i", false, "org.pqrs.Karabiner-Elements.Settings"),
-    ("i", true, "org.pqrs.Karabiner-EventViewer"),
-    ("o", false, "org.zotero.zotero"),
-    ("p", false, "com.apple.Photos"),
+    ("q", false, getToText(app: "com.endel.endel")), // TODO make endel playpause boi
+    ("q", true, getToText(app: "com.endel.endel")),
+    ("w", false, getToText(app: "com.microsoft.Excel")),
+    ("e", false, getToText(app: "md.obsidian")),
+    ("r", false, getToText(app: "com.microsoft.Outlook")),
+    ("r", true, getToText(app: "com.edisonmail.edisonmail")),
+    ("t", false, getToText(app: "com.microsoft.teams2")),
+    ("y", false, getToText(app: "com.rstudio.desktop")),
+    ("u", false, getToText(app: "dev.warp.Warp-Stable")),
+    ("i", false, getToText(app: "org.pqrs.Karabiner-Elements.Settings")),
+    ("i", true, getToText(app: "org.pqrs.Karabiner-EventViewer")),
+    ("o", false, getToText(app: "org.zotero.zotero")),
+    ("p", false, getToText(app: "com.apple.Photos")),
     
-    ("tab", false, "com.apple.systempreferences"),
-    ("a", false, "com.apple.Safari"),
-    ("s", false, "com.TickTick.task.mac"),
-    ("d", false, "com.automattic.beeper.desktop"),
-    ("g", false, "com.kishanbagaria.jack"),
-    ("h", false, "com.microsoft.VSCode"),
-    ("j", false, "com.apple.dt.Xcode"),
-    ("k", false, "org.whispersystems.signal-desktop"),
-    ("l", false, "com.apple.MobileSMS"),
-    ("delete_or_backspace", false, "net.whatsapp.WhatsApp"),
+    ("tab", false, getToText(app: "com.apple.systempreferences")),
+    ("a", false, getToText(app: "com.apple.Safari")),
+    ("s", false, getToText(app: "com.TickTick.task.mac")),
+    ("d", false, getToText(app: "com.automattic.beeper.desktop")),
+    ("g", false, getToText(app: "com.kishanbagaria.jack")),
+    ("h", false, getToText(app: "com.microsoft.VSCode")),
+    ("j", false, getToText(app: "com.apple.dt.Xcode")),
+    ("k", false, getToText(app: "org.whispersystems.signal-desktop")),
+    ("l", false, getToText(app: "com.apple.MobileSMS")),
+    ("delete_or_backspace", false, getToText(app: "net.whatsapp.WhatsApp")),
     
-    ("z", false, "com.apple.Safari.WebApp.D380587C-9309-4FB3-B3ED-3CD539EFA20B"),
-    ("x", false, "com.apple.Safari.WebApp.A9DFBA1A-8806-4BEC-BDAA-1B2F24F14407"),
-    ("c", true, "chris.ticker"),
-    ("v", false, "com.apple.finder"),
-    ("n", false, "com.apple.ScreenContinuity"),
-    ("m", false, "com.spotify.client"),
-    ("comma", false, "com.microsoft.Word"),
-    ("period", false, "com.runningwithcrayons.Alfred-Preferences"),
+    ("z", false, getToText(app: "com.apple.Safari.WebApp.D380587C-9309-4FB3-B3ED-3CD539EFA20B")),
+    ("x", false, getToText(app: "com.apple.Safari.WebApp.A9DFBA1A-8806-4BEC-BDAA-1B2F24F14407")),
+    ("c", true, getToText(app: "chris.ticker")),
+    ("v", false, getToText(app: "com.apple.finder")),
+    ("n", false, getToText(app: "com.apple.ScreenContinuity")),
+    ("m", false, getToText(app: "com.spotify.client")),
+    ("comma", false, getToText(app: "com.microsoft.Word")),
+    ("period", false, getToText(app: "com.runningwithcrayons.Alfred-Preferences")),
     
-    ("spacebar", false, "com.runningwithcrayons.Alfred"),
+    ("spacebar", false, getToText(key: "a", mods: ["left_control", "left_option", "left_shift"])),
 ]
 
 let launcher: (String, Bool, String) -> String = { k, s, a in
@@ -55,13 +55,7 @@ let launcher: (String, Bool, String) -> String = { k, s, a in
                     "mandatory": ["left_control"\(s ? ", \"left_shift\"" : "")]
                 }
             },
-            "to": [{
-                    "software_function": {
-                        "open_application": {
-                            "bundle_identifier": "\(a)"
-                        }
-                    }
-                }],
+            "to": [\(a)],
             "type": "basic"
         }
 """

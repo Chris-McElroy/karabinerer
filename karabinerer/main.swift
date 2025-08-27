@@ -85,6 +85,18 @@ func getToText(key: String?, mods: [String]? = nil, controlOff: Bool = false) ->
     return output
 }
 
+func getToText(app: String) -> String {
+    return """
+                {
+                    "software_function": {
+                        "open_application": {
+                            "bundle_identifier": "\(app)"
+                        }
+                    }
+                }
+"""
+}
+
 func getAppList(ifList: [String]? = nil, unlessList: [String]? = nil) -> String {
     var output = """
             "conditions": [
