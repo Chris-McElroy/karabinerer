@@ -383,7 +383,7 @@
             },
             "to": [
         {
-            "key_code": "e"
+            "key_code": "f"
         }],
             "type": "basic"
         },
@@ -664,7 +664,7 @@
             },
             "to": [
         {
-            "key_code": "escape"
+            "key_code": "e"
         }],
             "type": "basic"
         },
@@ -724,7 +724,7 @@
             },
             "to": [
         {
-            "key_code": "f"
+            "key_code": "escape"
         }],
             "type": "basic"
         },
