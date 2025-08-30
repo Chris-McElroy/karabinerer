@@ -323,7 +323,7 @@
             },
             "to": [
         {
-            "key_code": "7"
+            "key_code": "5"
         }],
             "type": "basic"
         },
@@ -343,7 +343,7 @@
             },
             "to": [
         {
-            "key_code": "8"
+            "key_code": "2"
         }],
             "type": "basic"
         },
@@ -363,7 +363,7 @@
             },
             "to": [
         {
-            "key_code": "9"
+            "key_code": "8"
         }],
             "type": "basic"
         },
@@ -524,7 +524,7 @@
             },
             "to": [
         {
-            "key_code": "5"
+            "key_code": "3"
         }],
             "type": "basic"
         },
@@ -544,7 +544,7 @@
             },
             "to": [
         {
-            "key_code": "4"
+            "key_code": "9"
         }],
             "type": "basic"
         },
@@ -564,7 +564,7 @@
             },
             "to": [
         {
-            "key_code": "1"
+            "key_code": "4"
         }],
             "type": "basic"
         },
@@ -584,7 +584,7 @@
             },
             "to": [
         {
-            "key_code": "2"
+            "key_code": "1"
         }],
             "type": "basic"
         },
@@ -604,7 +604,7 @@
             },
             "to": [
         {
-            "key_code": "3"
+            "key_code": "7"
         }],
             "type": "basic"
         },

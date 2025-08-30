@@ -12,12 +12,12 @@ let baseMinecraftMap: [(String, String)] = [
     ("left_shift", getToText(key: "d")),
     
     ("t", getToText(key: "6")),
-    ("g", getToText(key: "5")),
-    ("b", getToText(key: "4")),
+    ("g", getToText(key: "3")),
+    ("b", getToText(key: "9")),
     
-    ("r", getToText(key: "1")),
-    ("f", getToText(key: "2")),
-    ("v", getToText(key: "3")),
+    ("r", getToText(key: "4")),
+    ("f", getToText(key: "1")),
+    ("v", getToText(key: "7")),
     
     ("e", getToText(key: "q")),
     ("d", getToText(key: "spacebar")),
@@ -83,9 +83,9 @@ let f3MinecraftMap: [(String, String)] = [
 ]
 
 let invMinecraftMap: [(String, String)] = [
-    ("r", getToText(key: "7")),
-    ("f", getToText(key: "8")),
-    ("v", getToText(key: "9")),
+    ("r", getToText(key: "5")),
+    ("f", getToText(key: "2")),
+    ("v", getToText(key: "8")),
     ("g", getToText(key: "f")),
     ("e", getToText(key: "q", mods: ["left_command"])),
 ]
