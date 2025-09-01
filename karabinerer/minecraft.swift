@@ -39,39 +39,6 @@ let baseMinecraftMap: [(String, String)] = [
     ("right_command", getToText(key: "r")),
 ]
 
-//let altMinecraftMap: [(String, String)] = [
-//    ("left_shift", getToText(key: "a")),
-//    ("left_control", getToText(key: "right_shift")),
-//    ("spacebar", getToText(key: "d")),
-//    
-//    ("t", getToText(key: "4")),
-//    ("g", getToText(key: "5")),
-//    ("b", getToText(key: "6")),
-//    
-//    ("r", getToText(key: "1")),
-//    ("f", getToText(key: "2")),
-//    ("v", getToText(key: "3")),
-//    
-//    ("e", getToText(key: "q")),
-//    ("d", getToText(key: "spacebar")),
-////    ("c", getToText(key: "f3")),
-//    
-//    ("w", getToText(key: "escape")),
-//    ("s", getToText(key: "w")),
-//    ("x", getToText(key: "s")),
-//    
-//    ("q", getToText(key: "f")),
-////    ("a", getToText(key: "  ")),
-//    ("z", getToText(key: "left_shift")),
-//    
-//    ("tab", getToText(key: "left_control")),
-//    
-//    ("y", getToText(key: "c")),
-//    ("h", getToText(key: "x")),
-//    ("return_or_enter", getToText(key: "tab")),
-//    ("right_command", getToText(key: "r")),
-//]
-
 let f3MinecraftMap: [(String, String)] = [
     ("v", getToText(key: "g")),
     ("f", getToText(key: "b")),
@@ -120,37 +87,29 @@ let minecraftModeStarter = """
                         "name": "minecraft mode",
                         "value": 1
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
         }
 """
-
-//let altMinecraftModeStarter = """
-//,
-//        {
-//            "conditions": [
-//                {
-//                    "name": "minecraft mode",
-//                    "type": "variable_if",
-//                    "value": 0
-//                }
-//            ],
-//            "from": {
-//                "key_code": "quote",
-//                "modifiers": { "mandatory": ["left_control", "left_shift"] }
-//            },
-//            "to": [
-//                {
-//                    "set_variable": {
-//                        "name": "minecraft mode",
-//                        "value": 2
-//                    }
-//                }
-//            ],
-//            "type": "basic"
-//        }
-//"""
 
 let f3ModeStarter = """
 ,
@@ -262,7 +221,25 @@ let minecraftCustomExit = """
                         "value": 0
                     }
                 },
-                \(getToText(key: "t"))
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
+                },
+                \(getToText(key: "j"))
             ],
             "type": "basic"
         },
@@ -296,6 +273,24 @@ let minecraftCustomExit = """
                         "value": 0
                     }
                 },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
+                },
                 \(getToText(key: "slash"))
             ],
             "type": "basic"
@@ -324,29 +319,6 @@ let baseMinecraftMapper: (String, String) -> String = { f, t in
         }
 """
 }
-
-//let altMinecraftMapper: (String, String) -> String = { f, t in
-//"""
-//,
-//        {
-//            "conditions": [
-//                {
-//                    "name": "minecraft mode",
-//                    "type": "variable_if",
-//                    "value": 2
-//                }
-//            ],
-//            "from": {
-//                "key_code": "\(f)",
-//                "modifiers": {
-//                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
-//                }
-//            },
-//            "to": [\(t)],
-//            "type": "basic"
-//        }
-//"""
-//}
 
 let f3MinecraftMapper: (String, String) -> String = { f, t in
 """
@@ -394,37 +366,6 @@ let invMinecraftMapper: (String, String) -> String = { f, t in
 """
 }
 
-//let comboMinecraftMapper: (String, String, String) -> String = { f1, f2, t in
-//"""
-//,
-//        {
-//            "conditions": [
-//                {
-//                    "name": "minecraft mode",
-//                    "type": "variable_if",
-//                    "value": 1
-//                },
-//                {
-//                    "name": "f3 mode",
-//                    "type": "variable_if",
-//                    "value": 0
-//                }
-//            ],
-//            "from": {
-//                "simultaneous": [
-//                    {"key_code": "\(f1)"},
-//                    {"key_code": "\(f2)"}
-//                ],
-//                "modifiers": {
-//                    "optional": ["left_shift", "right_shift", "left_command", "right_control""]
-//                }
-//            },
-//            "to": [\(t)],
-//            "type": "basic"
-//        }
-//"""
-//}
-
 
 let minecraftExitMapper: (String) -> String = { k in
 """
@@ -458,6 +399,24 @@ let minecraftExitMapper: (String) -> String = { k in
                         "name": "inv mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -467,7 +426,6 @@ let minecraftExitMapper: (String) -> String = { k in
 
 func addMinecraft() {
     manipulators.append(minecraftModeStarter)
-//    manipulators.append(altMinecraftModeStarter)
     manipulators.append(f3ModeStarter)
     manipulators.append(invModeStarter)
     manipulators.append(minecraftCustomExit)
@@ -480,9 +438,6 @@ func addMinecraft() {
     for (from, to) in baseMinecraftMap {
         manipulators.append(baseMinecraftMapper(from, to))
     }
-//    for (from, to) in altMinecraftMap {
-//        manipulators.append(altMinecraftMapper(from, to))
-//    }
     for (key) in minecraftExitKeys {
         manipulators.append(minecraftExitMapper(key))
     }

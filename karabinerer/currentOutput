@@ -19,6 +19,24 @@
                         "name": "minecraft mode",
                         "value": 1
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -123,9 +141,27 @@
                         "value": 0
                     }
                 },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
+                },
                 
         {
-            "key_code": "t"
+            "key_code": "j"
         }
             ],
             "type": "basic"
@@ -157,6 +193,24 @@
                 {
                     "set_variable": {
                         "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 },
@@ -877,6 +931,24 @@
                         "name": "inv mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -908,6 +980,24 @@
                 {
                     "set_variable": {
                         "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 }
@@ -943,6 +1033,24 @@
                         "name": "inv mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -974,6 +1082,24 @@
                 {
                     "set_variable": {
                         "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 }
@@ -1009,6 +1135,24 @@
                         "name": "inv mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -1040,6 +1184,24 @@
                 {
                     "set_variable": {
                         "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 }
@@ -1075,6 +1237,24 @@
                         "name": "inv mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -1106,6 +1286,24 @@
                 {
                     "set_variable": {
                         "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 }
@@ -1141,6 +1339,24 @@
                         "name": "inv mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -1172,6 +1388,24 @@
                 {
                     "set_variable": {
                         "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 }
@@ -1207,6 +1441,24 @@
                         "name": "inv mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -1238,6 +1490,24 @@
                 {
                     "set_variable": {
                         "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 }
