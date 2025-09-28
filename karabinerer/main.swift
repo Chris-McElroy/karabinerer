@@ -54,12 +54,24 @@ func getFromText(key: String?, mandMods: [String]? = nil, optMods: [String]? = n
     return output
 }
 
-func getToText(key: String?, mods: [String]? = nil, controlOff: Bool = false) -> String {
+func getToText(key: String?, mods: [String]? = nil, typingMode: Bool = false) -> String {
     guard let key else { return "{ \"key_code\": \"vk_none\" }" }
-    var output = !controlOff ? "" : """
+    var output = !typingMode ? "" : """
         {
             "set_variable": {
                 "name": "control mode",
+                "value": 0
+            }
+        },
+        {
+            "set_variable": {
+                "name": "left layer",
+                "value": 0
+            }
+        },
+        {
+            "set_variable": {
+                "name": "right layer",
                 "value": 0
             }
         },

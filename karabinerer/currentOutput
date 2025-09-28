@@ -2017,7 +2017,24 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [
+            "to": [        {
+            "set_variable": {
+                "name": "control mode",
+                "value": 0
+            }
+        },
+        {
+            "set_variable": {
+                "name": "left layer",
+                "value": 0
+            }
+        },
+        {
+            "set_variable": {
+                "name": "right layer",
+                "value": 0
+            }
+        },
         {
             "key_code": "a",
             "modifiers": ["left_control", "left_option", "left_shift"]
@@ -7871,6 +7888,18 @@
             }
         },
         {
+            "set_variable": {
+                "name": "left layer",
+                "value": 0
+            }
+        },
+        {
+            "set_variable": {
+                "name": "right layer",
+                "value": 0
+            }
+        },
+        {
             "key_code": "f",
             "modifiers": ["command"]
         }],
@@ -7900,6 +7929,18 @@
             "to": [        {
             "set_variable": {
                 "name": "control mode",
+                "value": 0
+            }
+        },
+        {
+            "set_variable": {
+                "name": "left layer",
+                "value": 0
+            }
+        },
+        {
+            "set_variable": {
+                "name": "right layer",
                 "value": 0
             }
         },
@@ -7934,6 +7975,18 @@
             "to": [        {
             "set_variable": {
                 "name": "control mode",
+                "value": 0
+            }
+        },
+        {
+            "set_variable": {
+                "name": "left layer",
+                "value": 0
+            }
+        },
+        {
+            "set_variable": {
+                "name": "right layer",
                 "value": 0
             }
         },

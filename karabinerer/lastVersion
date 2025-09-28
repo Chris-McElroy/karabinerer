@@ -19,6 +19,24 @@
                         "name": "minecraft mode",
                         "value": 1
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -27,13 +45,13 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
-                "key_code": "r",
-                "modifiers": { "optional": ["left_shift", "left_control", "right_control"] }
+                "key_code": "c",
+                "modifiers": { "optional": ["left_shift", "right_shift", "left_command", "right_control"] }
             },
             "to": [
                 {
@@ -58,8 +76,47 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "a",
+                "modifiers": { "optional": ["left_shift", "right_shift", "left_command", "right_control"] }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 1
+                    }
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                }
+            ],
+            "to_if_alone": [
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                { "key_code": "0" }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -72,9 +129,39 @@
                         "value": 0
                     }
                 },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
+                },
                 
         {
-            "key_code": "t"
+            "key_code": "j"
         }
             ],
             "type": "basic"
@@ -83,8 +170,8 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -94,6 +181,36 @@
                 {
                     "set_variable": {
                         "name": "minecraft mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 },
@@ -113,49 +230,9 @@
                 }
             ],
             "from": {
-                "key_code": "w",
+                "key_code": "v",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "f"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "f3 mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "a",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "b"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "f3 mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "q",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
@@ -173,9 +250,89 @@
                 }
             ],
             "from": {
-                "key_code": "z",
+                "key_code": "f",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "b"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "f3 mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "left_control",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "f"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "f3 mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "spacebar",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "f"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "f3 mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "left_shift",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "escape"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "f3 mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "r",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
@@ -193,9 +350,9 @@
                 }
             ],
             "from": {
-                "key_code": "tab",
+                "key_code": "t",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
@@ -207,51 +364,55 @@
         {
             "conditions": [
                 {
-                    "name": "minecraft mode",
+                    "name": "inv mode",
                     "type": "variable_if",
                     "value": 1
-                },
-                {
-                    "name": "f3 mode",
-                    "type": "variable_if",
-                    "value": 0
                 }
             ],
             "from": {
-                "simultaneous": [
-                    {"key_code": "q"},
-                    {"key_code": "w"}
-                ],
+                "key_code": "r",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
         {
-            "key_code": "7"
+            "key_code": "5"
         }],
             "type": "basic"
         },
         {
             "conditions": [
                 {
-                    "name": "minecraft mode",
+                    "name": "inv mode",
                     "type": "variable_if",
                     "value": 1
-                },
-                {
-                    "name": "f3 mode",
-                    "type": "variable_if",
-                    "value": 0
                 }
             ],
             "from": {
-                "simultaneous": [
-                    {"key_code": "a"},
-                    {"key_code": "s"}
-                ],
+                "key_code": "f",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "2"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "inv mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "v",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
@@ -263,28 +424,41 @@
         {
             "conditions": [
                 {
-                    "name": "minecraft mode",
+                    "name": "inv mode",
                     "type": "variable_if",
                     "value": 1
-                },
-                {
-                    "name": "f3 mode",
-                    "type": "variable_if",
-                    "value": 0
                 }
             ],
             "from": {
-                "simultaneous": [
-                    {"key_code": "z"},
-                    {"key_code": "x"}
-                ],
+                "key_code": "g",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
         {
-            "key_code": "9"
+            "key_code": "f"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "inv mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "e",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "q",
+            "modifiers": ["left_command"]
         }],
             "type": "basic"
         },
@@ -299,7 +473,7 @@
             "from": {
                 "key_code": "left_option",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
@@ -317,9 +491,49 @@
                 }
             ],
             "from": {
+                "key_code": "left_control",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "right_shift"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "spacebar",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "right_shift"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
                 "key_code": "left_shift",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
@@ -337,229 +551,9 @@
                 }
             ],
             "from": {
-                "key_code": "left_control",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "left_shift"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
                 "key_code": "t",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "f"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "g",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "z"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "b",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "f5"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "v",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "0"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "e",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "escape"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "w",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "1"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "s",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "2"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "x",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "3"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "q",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "4"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "a",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
-                }
-            },
-            "to": [
-        {
-            "key_code": "5"
-        }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "z",
-                "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
@@ -577,14 +571,14 @@
                 }
             ],
             "from": {
-                "key_code": "tab",
+                "key_code": "g",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
         {
-            "key_code": "right_control"
+            "key_code": "3"
         }],
             "type": "basic"
         },
@@ -597,14 +591,14 @@
                 }
             ],
             "from": {
-                "key_code": "d",
+                "key_code": "b",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
         {
-            "key_code": "w"
+            "key_code": "9"
         }],
             "type": "basic"
         },
@@ -617,14 +611,14 @@
                 }
             ],
             "from": {
-                "key_code": "c",
+                "key_code": "r",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
         {
-            "key_code": "s"
+            "key_code": "4"
         }],
             "type": "basic"
         },
@@ -639,7 +633,67 @@
             "from": {
                 "key_code": "f",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "1"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "v",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "7"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "e",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "q"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "d",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
@@ -657,9 +711,169 @@
                 }
             ],
             "from": {
+                "key_code": "w",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "e"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "s",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "w"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "x",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "s"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "q",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "escape"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "z",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "left_shift"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "tab",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "right_control"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "y",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "c"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "h",
+                "modifiers": {
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
+                }
+            },
+            "to": [
+        {
+            "key_code": "x"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
                 "key_code": "return_or_enter",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
@@ -679,12 +893,12 @@
             "from": {
                 "key_code": "right_command",
                 "modifiers": {
-                    "optional": ["left_shift", "left_control", "right_control"]
+                    "optional": ["left_shift", "right_shift", "left_command", "right_control"]
                 }
             },
             "to": [
         {
-            "key_code": "left_control"
+            "key_code": "r"
         }],
             "type": "basic"
         },
@@ -692,50 +906,8 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "y"
-            },
-            "to": [
-                {
-                    "set_variable": {
-                        "name": "minecraft mode",
-                        "value": 0
-                    }
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "h"
-            },
-            "to": [
-                {
-                    "set_variable": {
-                        "name": "minecraft mode",
-                        "value": 0
-                    }
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -747,6 +919,36 @@
                         "name": "minecraft mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -755,8 +957,8 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -768,6 +970,36 @@
                         "name": "minecraft mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -776,8 +1008,8 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -789,6 +1021,36 @@
                         "name": "minecraft mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -797,8 +1059,8 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -810,6 +1072,36 @@
                         "name": "minecraft mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -818,8 +1110,8 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -831,6 +1123,36 @@
                         "name": "minecraft mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -839,8 +1161,8 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -852,6 +1174,36 @@
                         "name": "minecraft mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -860,8 +1212,8 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -873,6 +1225,36 @@
                         "name": "minecraft mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -881,8 +1263,8 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -894,6 +1276,36 @@
                         "name": "minecraft mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -902,8 +1314,8 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -915,6 +1327,36 @@
                         "name": "minecraft mode",
                         "value": 0
                     }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
                 }
             ],
             "type": "basic"
@@ -923,8 +1365,8 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -936,25 +1378,34 @@
                         "name": "minecraft mode",
                         "value": 0
                     }
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "right_command"
-            },
-            "to": [
+                },
                 {
                     "set_variable": {
-                        "name": "minecraft mode",
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 }
@@ -965,29 +1416,8 @@
             "conditions": [
                 {
                     "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
-                }
-            ],
-            "from": {
-                "key_code": "spacebar"
-            },
-            "to": [
-                {
-                    "set_variable": {
-                        "name": "minecraft mode",
-                        "value": 0
-                    }
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "name": "minecraft mode",
-                    "type": "variable_if",
-                    "value": 1
+                    "type": "variable_unless",
+                    "value": 0
                 }
             ],
             "from": {
@@ -997,6 +1427,87 @@
                 {
                     "set_variable": {
                         "name": "minecraft mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
+                        "value": 0
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "minecraft mode",
+                    "type": "variable_unless",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "delete_or_backspace"
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "minecraft mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "f3 mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "inv mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "control mode",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "left layer",
+                        "value": 0
+                    }
+                },
+                {
+                    "set_variable": {
+                        "name": "right layer",
                         "value": 0
                     }
                 }
@@ -1010,7 +1521,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.endel.endel"
@@ -1026,7 +1537,7 @@
                     "mandatory": ["left_control", "left_shift"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.endel.endel"
@@ -1042,7 +1553,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.microsoft.Excel"
@@ -1058,7 +1569,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "md.obsidian"
@@ -1074,7 +1585,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.microsoft.Outlook"
@@ -1090,7 +1601,7 @@
                     "mandatory": ["left_control", "left_shift"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.edisonmail.edisonmail"
@@ -1106,7 +1617,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.microsoft.teams2"
@@ -1122,7 +1633,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.rstudio.desktop"
@@ -1138,7 +1649,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "dev.warp.Warp-Stable"
@@ -1154,7 +1665,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "org.pqrs.Karabiner-Elements.Settings"
@@ -1170,7 +1681,7 @@
                     "mandatory": ["left_control", "left_shift"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "org.pqrs.Karabiner-EventViewer"
@@ -1186,7 +1697,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "org.zotero.zotero"
@@ -1202,7 +1713,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.apple.Photos"
@@ -1218,7 +1729,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.apple.systempreferences"
@@ -1234,7 +1745,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.apple.Safari"
@@ -1250,7 +1761,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.TickTick.task.mac"
@@ -1266,7 +1777,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.automattic.beeper.desktop"
@@ -1282,7 +1793,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.kishanbagaria.jack"
@@ -1298,7 +1809,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.microsoft.VSCode"
@@ -1314,7 +1825,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.apple.dt.Xcode"
@@ -1330,7 +1841,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "org.whispersystems.signal-desktop"
@@ -1346,7 +1857,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.apple.MobileSMS"
@@ -1362,7 +1873,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "net.whatsapp.WhatsApp"
@@ -1378,7 +1889,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.apple.Safari.WebApp.D380587C-9309-4FB3-B3ED-3CD539EFA20B"
@@ -1394,7 +1905,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.apple.Safari.WebApp.A9DFBA1A-8806-4BEC-BDAA-1B2F24F14407"
@@ -1410,7 +1921,7 @@
                     "mandatory": ["left_control", "left_shift"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "chris.ticker"
@@ -1426,7 +1937,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.apple.finder"
@@ -1442,7 +1953,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.apple.ScreenContinuity"
@@ -1458,7 +1969,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.spotify.client"
@@ -1474,7 +1985,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.microsoft.Word"
@@ -1490,7 +2001,7 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
+            "to": [                {
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "com.runningwithcrayons.Alfred-Preferences"
@@ -1506,13 +2017,11 @@
                     "mandatory": ["left_control"]
                 }
             },
-            "to": [{
-                    "software_function": {
-                        "open_application": {
-                            "bundle_identifier": "com.runningwithcrayons.Alfred"
-                        }
-                    }
-                }],
+            "to": [
+        {
+            "key_code": "a",
+            "modifiers": ["left_control", "left_option", "left_shift"]
+        }],
             "type": "basic"
         },
         {

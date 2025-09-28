@@ -42,7 +42,7 @@ let launchers: [(String, Bool, String)] = [
     ("comma", false, getToText(app: "com.microsoft.Word")),
     ("period", false, getToText(app: "com.runningwithcrayons.Alfred-Preferences")),
     
-    ("spacebar", false, getToText(key: "a", mods: ["left_control", "left_option", "left_shift"])),
+    ("spacebar", false, getToText(key: "a", mods: ["left_control", "left_option", "left_shift"], typingMode: true)),
 ]
 
 let launcher: (String, Bool, String) -> String = { k, s, a in
