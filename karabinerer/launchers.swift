@@ -34,7 +34,8 @@ let launchers: [(String, Bool, String)] = [
     ("delete_or_backspace", false, getToText(app: "net.whatsapp.WhatsApp")),
     
     ("z", false, getToText(app: "com.apple.Safari.WebApp.D380587C-9309-4FB3-B3ED-3CD539EFA20B")),
-    ("x", false, getToText(app: "com.apple.Safari.WebApp.A9DFBA1A-8806-4BEC-BDAA-1B2F24F14407")),
+    ("x", false, getToText(app: "com.apple.Safari.WebApp.C60C7963-C77D-4FD6-A50E-60B6B705E412")),
+    ("x", true, getToText(app: "com.apple.Safari.WebApp.A9DFBA1A-8806-4BEC-BDAA-1B2F24F14407")),
     ("c", true, getToText(app: "chris.ticker")),
     ("v", false, getToText(app: "com.apple.finder")),
     ("n", false, getToText(app: "com.apple.ScreenContinuity")),
