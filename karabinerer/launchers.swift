@@ -23,7 +23,7 @@ let launchers: [(String, Bool, String)] = [
     ("p", false, getToText(app: "com.apple.Photos")),
     
     ("tab", false, getToText(app: "com.apple.systempreferences")),
-    ("a", false, getToText(app: "com.apple.Safari")),
+    ("a", false, getToText(app: "net.imput.helium")),
     ("s", false, getToText(app: "com.TickTick.task.mac")),
     ("d", false, getToText(app: "com.automattic.beeper.desktop")),
     ("g", false, getToText(app: "com.kishanbagaria.jack")),
