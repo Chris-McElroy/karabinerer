@@ -37,6 +37,7 @@ let baseSymbolsKeymap: [(String, String)] = [
     ("comma", getToText(key: nil)),
     ("quote", getToText(key: nil)),
     ("period", getToText(key: nil)),
+    ("spacebar", getToText(key: "spacebar")),
 ]
 
 let shiftedSymbolsKeymap: [(String, String)] = [
@@ -69,6 +70,7 @@ let shiftedSymbolsKeymap: [(String, String)] = [
     ("comma", getToText(key: nil)),
     ("quote", getToText(key: nil)),
     ("period", getToText(key: nil)),
+    ("spacebar", getToText(key: "spacebar")),
 ]
 
 let baseSymbolsMapper: (String, String) -> String = { f, t in

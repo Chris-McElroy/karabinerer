@@ -1524,23 +1524,7 @@
             "to": [                {
                     "software_function": {
                         "open_application": {
-                            "bundle_identifier": "com.endel.endel"
-                        }
-                    }
-                }],
-            "type": "basic"
-        },
-        {
-            "from": {
-                "key_code": "q",
-                "modifiers": {
-                    "mandatory": ["left_control", "left_shift"]
-                }
-            },
-            "to": [                {
-                    "software_function": {
-                        "open_application": {
-                            "bundle_identifier": "com.endel.endel"
+                            "bundle_identifier": "com.microsoft.Word"
                         }
                     }
                 }],
@@ -1644,22 +1628,6 @@
         },
         {
             "from": {
-                "key_code": "u",
-                "modifiers": {
-                    "mandatory": ["left_control"]
-                }
-            },
-            "to": [                {
-                    "software_function": {
-                        "open_application": {
-                            "bundle_identifier": "dev.warp.Warp-Stable"
-                        }
-                    }
-                }],
-            "type": "basic"
-        },
-        {
-            "from": {
                 "key_code": "i",
                 "modifiers": {
                     "mandatory": ["left_control"]
@@ -1685,22 +1653,6 @@
                     "software_function": {
                         "open_application": {
                             "bundle_identifier": "org.pqrs.Karabiner-EventViewer"
-                        }
-                    }
-                }],
-            "type": "basic"
-        },
-        {
-            "from": {
-                "key_code": "o",
-                "modifiers": {
-                    "mandatory": ["left_control"]
-                }
-            },
-            "to": [                {
-                    "software_function": {
-                        "open_application": {
-                            "bundle_identifier": "org.zotero.zotero"
                         }
                     }
                 }],
@@ -1748,7 +1700,7 @@
             "to": [                {
                     "software_function": {
                         "open_application": {
-                            "bundle_identifier": "com.apple.Safari"
+                            "bundle_identifier": "net.imput.helium"
                         }
                     }
                 }],
@@ -1796,7 +1748,7 @@
             "to": [                {
                     "software_function": {
                         "open_application": {
-                            "bundle_identifier": "com.kishanbagaria.jack"
+                            "bundle_identifier": "org.zotero.zotero"
                         }
                     }
                 }],
@@ -1892,7 +1844,7 @@
             "to": [                {
                     "software_function": {
                         "open_application": {
-                            "bundle_identifier": "com.apple.Safari.WebApp.D380587C-9309-4FB3-B3ED-3CD539EFA20B"
+                            "bundle_identifier": "com.apple.Safari.WebApp.C60C7963-C77D-4FD6-A50E-60B6B705E412"
                         }
                     }
                 }],
@@ -1908,23 +1860,7 @@
             "to": [                {
                     "software_function": {
                         "open_application": {
-                            "bundle_identifier": "com.apple.Safari.WebApp.A9DFBA1A-8806-4BEC-BDAA-1B2F24F14407"
-                        }
-                    }
-                }],
-            "type": "basic"
-        },
-        {
-            "from": {
-                "key_code": "x",
-                "modifiers": {
-                    "mandatory": ["left_control", "left_shift"]
-                }
-            },
-            "to": [                {
-                    "software_function": {
-                        "open_application": {
-                            "bundle_identifier": "com.apple.Safari.WebApp.C60C7963-C77D-4FD6-A50E-60B6B705E412"
+                            "bundle_identifier": "com.apple.Safari.WebApp.1715C222-FD66-4B76-935F-C4C83AE31FF5"
                         }
                     }
                 }],
@@ -1988,7 +1924,7 @@
             "to": [                {
                     "software_function": {
                         "open_application": {
-                            "bundle_identifier": "com.spotify.client"
+                            "bundle_identifier": "org.strawberrymusicplayer.strawberry"
                         }
                     }
                 }],
@@ -2004,7 +1940,7 @@
             "to": [                {
                     "software_function": {
                         "open_application": {
-                            "bundle_identifier": "com.microsoft.Word"
+                            "bundle_identifier": "com.mitchellh.ghostty"
                         }
                     }
                 }],

@@ -36,7 +36,8 @@ let baseNumbersKeymap: [(String, String)] = [
     ("m", getToText(key: "equal_sign")),
     ("comma", getToText(key: "comma")),
     ("quote", getToText(key: "semicolon", mods: ["shift"])),
-    ("period", getToText(key: nil))
+    ("period", getToText(key: nil)),
+    ("spacebar", getToText(key: "spacebar"))
 ]
 
 let shiftedNumbersKeymap: [(String, String)] = [
@@ -69,6 +70,7 @@ let shiftedNumbersKeymap: [(String, String)] = [
     ("comma", getToText(key: nil)),
     ("quote", getToText(key: nil)),
     ("period", getToText(key: nil)),
+    ("spacebar", getToText(key: "spacebar")),
 ]
 
 let baseNumbersMapper: (String, String) -> String = { f, t in

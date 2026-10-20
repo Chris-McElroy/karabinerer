@@ -3834,6 +3834,61 @@
                     "name": "left layer",
                     "type": "variable_if",
                     "value": 1
+                },
+                {
+                    "name": "right layer",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "spacebar"
+            },
+            "to": [
+        {
+            "key_code": "spacebar"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "right layer",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "spacebar",
+                "modifiers": { "mandatory": ["left_option"] }
+            },
+            "to": [
+        {
+            "key_code": "spacebar"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 1
                 }
             ],
             "from": {
@@ -4836,6 +4891,47 @@
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
             "to": [{ "key_code": "vk_none" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "spacebar",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+        {
+            "key_code": "spacebar"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "spacebar",
+                "modifiers": { "mandatory": ["left_option", "shift"] }
+            },
+            "to": [
+        {
+            "key_code": "spacebar"
+        }],
             "type": "basic"
         },
         {
@@ -6387,6 +6483,61 @@
                 {
                     "name": "left layer",
                     "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "right layer",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "spacebar"
+            },
+            "to": [
+        {
+            "key_code": "spacebar"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "right layer",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "spacebar",
+                "modifiers": { "mandatory": ["right_control"] }
+            },
+            "to": [
+        {
+            "key_code": "spacebar"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
                     "value": 1
                 }
             ],
@@ -7390,6 +7541,47 @@
                 "modifiers": { "mandatory": ["left_option", "shift"] }
             },
             "to": [{ "key_code": "vk_none" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "left layer",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "from": {
+                "key_code": "spacebar",
+                "modifiers": { "mandatory": ["shift"] }
+            },
+            "to": [
+        {
+            "key_code": "spacebar"
+        }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "control mode",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "from": {
+                "key_code": "spacebar",
+                "modifiers": { "mandatory": ["left_option", "shift"] }
+            },
+            "to": [
+        {
+            "key_code": "spacebar"
+        }],
             "type": "basic"
         },
         {
