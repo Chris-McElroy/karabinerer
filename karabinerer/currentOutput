@@ -1844,7 +1844,7 @@
             "to": [                {
                     "software_function": {
                         "open_application": {
-                            "bundle_identifier": "com.apple.Safari.WebApp.C60C7963-C77D-4FD6-A50E-60B6B705E412"
+                            "bundle_identifier": "training.solve.solve-training"
                         }
                     }
                 }],

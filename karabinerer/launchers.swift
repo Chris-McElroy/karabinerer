@@ -33,7 +33,7 @@ let launchers: [(String, Bool, String)] = [
     ("l", false, getToText(app: "com.apple.MobileSMS")),
     ("delete_or_backspace", false, getToText(app: "net.whatsapp.WhatsApp")),
     
-    ("z", false, getToText(app: "com.apple.Safari.WebApp.C60C7963-C77D-4FD6-A50E-60B6B705E412")),
+    ("z", false, getToText(app: "training.solve.solve-training")),
     ("x", false, getToText(app: "com.apple.Safari.WebApp.1715C222-FD66-4B76-935F-C4C83AE31FF5")),
 //    ("x", true, getToText(app: "com.apple.Safari.WebApp.C60C7963-C77D-4FD6-A50E-60B6B705E412")),
     ("c", true, getToText(app: "chris.ticker")),
